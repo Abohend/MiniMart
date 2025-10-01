@@ -1,0 +1,51 @@
+.pg-header {
+  margin-top: 80px;
+  margin-bottom: 20px;
+  /* display: flex; */
+}
+
+.navigation a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.filter {
+  /* height: 120px; */
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.filter .search-box {
+  margin-top: 0;
+  /* height: 100%; */
+  width: 100%;
+}
+
+#categories {
+  height: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, 1fr);
+  /* gap: 5px; */
+  justify-content: start;
+  align-items: stretch;
+  gap: 2px 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.filter .pg-categories button {
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  padding-inline: 39px;
+  white-space: nowrap;
+}
+
+#categories .clicked {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}

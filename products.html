@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Products</title>
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./css/products.css" />
+        <link rel="stylesheet" href="./css/components.css" />
+        <link rel="stylesheet" href="./css/responsive.css" />
+        <script src="./js/main.js"></script>
+        <script src="./js/products.js" defer></script>
+    </head>
+    <body>
+        <header id="header"></header>
+
+        <main>
+            <main>
+                <header class="pg-header">
+                    <div class="navigation">
+                        <p><a href="./index.html">Home</a> / <a href="">Products</a></p>
+                        <h1>PRODUCTS</h1>
+                    </div>
+
+                    <div class="filter">
+                        <div class="search-box">
+                            <img
+                                src="./assets/icons/search.png"
+                                alt="search icon"
+                                onclick="search()"
+                            />
+                            <input id="search-box" type="text" placeholder="Search" />
+                        </div>
+
+                        <div id="categories" class="pg-categories">
+                            <button onclick="fetchProducts('https://dummyjson.com/products')" class="clicked">All</button>
+                        </div>
+                    </div>
+                </header>
+                <main>
+                    <!-- Product Grid -->
+                    <div id="products-grid" class="products-grid">
+
+                    </div>
+                </main>
+            </main>
+        </main>
+
+        <div id="footer"></div>
+    </body>
+</html>

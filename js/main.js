@@ -2,7 +2,7 @@
 fetch("./components/header.html")
 .then(response => response.text())
 .then(data => {
-    document.querySelector('header').innerHTML = data;
+    document.getElementById('header').innerHTML = data;
 
     // toggle navbar
     const navToggle = document.querySelector('.nav-toggle');
@@ -18,4 +18,6 @@ fetch("./components/footer.html")
 .then(data => {
     document.getElementById('footer').innerHTML = data;
 })
+
+
 

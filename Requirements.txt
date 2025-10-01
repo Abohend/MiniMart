@@ -12,7 +12,7 @@ Functional Requirements
 - Allow users to "favorite" products (e.g., via a heart icon).
 - Store favorites in localStorage.
 - Display all favorited items on a separate page.
-- Allow users to remove items from favorites.
+- Allow users to remove items from favorites.  
 
 3. Cart Page
 - Enable users to add products to a cart.
@@ -22,7 +22,7 @@ Functional Requirements
 
 4. Checkout Page
 - Display a summary of cart items.
-- Include a simple form (name, email, address).
+- Include a simple form (name, email, address ).
 - Validate form inputs (basic client-side validation).
 - Simulate order submission (e.g., show a success message).
 

@@ -45,7 +45,8 @@ function fetchProducts(url) {
                 const spanClassList = favorites.includes(product.id)? "favorited" : "";
                 // check if in cart
                 const cart = JSON.parse(localStorage.getItem("cart")) || [];
-                const addBtnClassList = cart.includes(product.id)? "add-btn added" : "add-btn";
+                const itemIndex = cart.findIndex(item => item.id === product.id);
+                const addBtnClassList = itemIndex > -1? "add-btn added" : "add-btn";
                 // console.log(addBtnClassList);
                 container.innerHTML += `
                     <div class="product-card">
@@ -78,22 +79,3 @@ function search() {
 }
 
 
-// toggle favortite
-function toggleFavorite(productId) {
-    // change the style
-    const spanFavIcon = document.querySelector(`#fav-btn-${productId} span`);
-    spanFavIcon.classList.toggle("favorited");
-
-    // update local storage
-    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    if (favorites.includes(productId)) {
-        // remove it
-        favorites = favorites.filter(id => id != productId);
-    }
-    else {
-        favorites.push(productId);
-    }
-
-    // save to local storage
-    localStorage.setItem("favorites", JSON.stringify(favorites));
-}

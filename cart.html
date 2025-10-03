@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shopping Bag</title>
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./css/components.css" />
+        <link rel="stylesheet" href="./css/cart.css" />
+        <link rel="stylesheet" href="./css/responsive.css" />
+        <script src="./js/main.js"></script>
+        <script src="./js/cart.js" defer></script>
+    </head>
+    <body>
+        <header id="header"></header>
+        <main>
+            <header class="cart-header">              
+                <button class="selected">SHOPPING BAG</button>
+                <button id="fav-btn">FAVOURITES</button>
+            </header>
+            <section class="cart-main">
+                <section class="card-items">
+                    <hr/>
+                    <!-- cards will be loaded here -->
+                </section>
+                <section class="order-summary">
+                    <h2>ORDER SUMMARY</h2>
+                    <div class="checkout-info">
+                        <p class="info">Subtotal</p>
+                        <p class="price" id="subtotal"></p>
+                    </div>
+                    <div class="checkout-info">
+                        <p class="info">Shipping</p>
+                        <p class="price">$5.00</p>
+                    </div>
+                    <hr/>
+                    <div class="checkout-info">
+                        <p class="info">Total</p>
+                        <p class="price" id="total"></p>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label for="agreement">I agree to the Terms and Conditions</label>
+                        <button><a href="checkout.html">CONTINUE</a></button>
+                    </div>
+    
+                </section>
+            </section>
+            <section>
+                
+            </section>
+        </main>
+        <div id="footer"></div>
+    </body>
+</html>

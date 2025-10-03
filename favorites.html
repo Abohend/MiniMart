@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Favorites</title>
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./css/components.css" />
+        <link rel="stylesheet" href="./css/cart.css" />
+        <link rel="stylesheet" href="./css/favorites.css" />
+        <link rel="stylesheet" href="./css/responsive.css" />
+        <script src="./js/utils.js"></script>
+        <script src="./js/main.js"></script>
+        <script src="./js/favorites.js" defer></script>
+    </head>
+    <body>
+        <header id="header"></header>
+        <main>
+            <header class="cart-header">              
+                <button id="cart-btn">SHOPPING BAG</button>
+                <button id="fav-btn" class="selected">FAVOURITES</button>
+            </header>
+            <section class="cart-main">
+                <section class="card-items">
+                    <!-- cards will be loaded here -->
+                    <div class="cart-card">
+                        <div class="product-card">
+                            <div class="product-img">
+                                <img src="./assets/images/image.png" alt="title" />
+                                <button class="fav-btn">
+                                    <span>🤍</span>
+                                </button>
+                                <button class="add-btn">+</button>
+                            </div>
+                            <div class="product-info">
+                                <small>category</small>
+                                <div class="product-name">
+                                    <h3>product name</h3>
+                                    <span class="price">$99.9</span>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card-controller">
+                            <button class="delete-btn">✖</button>
+                            <div class="card-item-count">
+                                <button>+</button>
+                                <input type="number" value="1"/>
+                                <button>-</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section>
+                
+            </section>
+        </main>
+        <div id="footer"></div>
+    </body>
+</html>

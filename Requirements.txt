@@ -36,7 +36,7 @@ Technical Requirements
 - Organize code using separation of concerns (HTML structure, CSS styling, JS logic).
 
 Bonus Challenges (Optional)
-- Add a loading spinner while fetching data.
+- Add a loadi ng spinner while fetching data.
 - Implement pagination or lazy loading.
 - Add price range filtering.
 - Include dark mode toggle.

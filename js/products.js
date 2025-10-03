@@ -40,14 +40,19 @@ function fetchProducts(url) {
             container.innerHTML = "";
 
             products.forEach((product) => {
-                // check if favorited
-                spanClassList = localStorage.getItem("favorites").includes(product.id)? "favorited" : "";
+                // check if favorited 
+                const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+                const spanClassList = favorites.includes(product.id)? "favorited" : "";
+                // check if in cart
+                const cart = JSON.parse(localStorage.getItem("cart")) || [];
+                const addBtnClassList = cart.includes(product.id)? "add-btn added" : "add-btn";
+                // console.log(addBtnClassList);
                 container.innerHTML += `
                     <div class="product-card">
                         <div class="product-img">
                             <img src=${product.images[0]} alt=${product.title} />
                             <button class="fav-btn" id="fav-btn-${product.id}" onclick="toggleFavorite(${product.id})"><span class="${spanClassList}">🤍</span></button>
-                            <button class="add-btn">+</button>
+                            <button class="${addBtnClassList}" id="add-btn-${product.id}" onclick="toggleAddToCart(${product.id})" >+</button>
                         </div>
                         <div class="product-info">
                             <small>${product.category}</small>

@@ -265,6 +265,16 @@ footer ul {
     font-size: 20px;
 }
 
+.add-btn.added::after {
+    background-color: var(--secondary-color);
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
 .product-info {
     margin-top: 10px;
     text-align: left;

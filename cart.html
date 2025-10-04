@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Shopping Bag</title>
+        <link rel="shortcut icon" href="./assets/icons/favicon.png" type="image/x-icon">
         <link rel="stylesheet" href="./css/main.css" />
         <link rel="stylesheet" href="./css/components.css" />
         <link rel="stylesheet" href="./css/cart.css" />
@@ -38,11 +39,11 @@
                         <p class="info">Total</p>
                         <p class="price" id="total"></p>
                     </div>
-                    <div>
-                        <input type="checkbox">
+                    <form action="checkout.html">
+                        <input type="checkbox" id="agreement" required>
                         <label for="agreement">I agree to the Terms and Conditions</label>
-                        <button><a href="checkout.html">CONTINUE</a></button>
-                    </div>
+                        <button type="submit">CONTINUE</button>
+                    </form>
     
                 </section>
             </section>

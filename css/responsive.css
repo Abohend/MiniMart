@@ -11,7 +11,7 @@
     /* .nav-left {
         position: relative;
     } */
-
+    /* Navbar Start */
     .nav-links {
         /* display: none; */
         width: auto;
@@ -43,17 +43,18 @@
         z-index: 20;
     }
 
-    .nav-container button.fav-btn {
+    .nav-container a.fav-btn {
         display: none;
     }
 
-    button.cart-btn-secondary {
+    a.cart-btn-secondary {
         display: none;
     }
 
     .nav-right {
         justify-content: space-around;
     }
+    /* Navbar End */
 
     /* search box */
     .search-box {

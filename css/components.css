@@ -27,6 +27,7 @@ nav {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  display: none;
 }
 
 .nav-toggle span {
@@ -53,6 +54,7 @@ nav {
   justify-content: space-between;
   list-style-type: none;
   z-index: 9;
+  column-gap: 10px;
 }
 
 .nav-links a {
@@ -105,13 +107,28 @@ nav {
   align-items: center;
   font-size: x-small;
   opacity: var(--opacity-val);
+  cursor: pointer;
+}
+
+.nav-right a {
+  width: var(--nav-height);
+  height: var(--nav-height);
+  border: 5px solid var(--primary-color);
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-small;
+  opacity: var(--opacity-val);
+  cursor: pointer;
 }
 
 .nav-btns {
   display: flex;
 }
 
-button.cart-btn-secondary {
+a.cart-btn-secondary {
   font-size: medium;
   width: 90px;
   border-radius: 30px;
@@ -119,9 +136,10 @@ button.cart-btn-secondary {
   color: white;
   position: relative;
   right: -3px;
+  text-decoration: none;
 }
 
-button.cart-btn-primary {
+a.cart-btn-primary {
   background-color: transparent;
 }
 

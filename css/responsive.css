@@ -158,3 +158,11 @@
         overflow-y: auto;
     }
 }
+
+
+/* checkout page */
+@media (max-width: 768px) {
+    .checkout-content {
+        grid-template-columns: 1fr;
+    }
+}

@@ -23,42 +23,39 @@ Promise.all(
             .then((product) => {
                 total += product.price * item.amount;
 
-                const favorites =
-                    JSON.parse(localStorage.getItem("favorites")) || [];
-                const spanClassList = favorites.includes(product.id)
-                    ? "favorited"
-                    : "";
+                const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+                const spanClassList = favorites.includes(product.id)? "favorited": "";
 
                 const cartItem = cart.find((i) => i.id === product.id);
                 const cartAmount = cartItem ? cartItem.amount : 0;
 
                 cardItems.innerHTML += `
-          <div class="cart-card">
-            <div class="product-card">
-              <div class="product-img">
-                <img src="${product.images[0]}" alt="${product.title}" />
-                <button class="fav-btn" id="fav-btn-${product.id}" onclick="toggleFavorite(${product.id})">
-                  <span class="${spanClassList}">🤍</span>
-                </button>
-              </div>
-              <div class="product-info">
-                <small>${product.category}</small>
-                <div class="product-name">
-                  <h3>${product.title}</h3>
-                  <span class="price">$${product.price}</span>
-                </div>
-              </div>
-            </div>
+                    <div class="cart-card">
+                        <div class="product-card">
+                        <div class="product-img">
+                            <img src="${product.images[0]}" alt="${product.title}" />
+                            <button class="fav-btn" id="fav-btn-${product.id}" onclick="toggleFavorite(${product.id})">
+                            <span class="${spanClassList}">🤍</span>
+                            </button>
+                        </div>
+                        <div class="product-info">
+                            <small>${product.category}</small>
+                            <div class="product-name">
+                            <h3>${product.title}</h3>
+                            <span class="price">$${product.price}</span>
+                            </div>
+                        </div>
+                        </div>
 
-            <div class="card-controller">
-              <button class="delete-btn" onclick="removeFromCart(${product.id})">✖</button>
-              <div class="card-item-count">
-                <button onclick="updateCart(${product.id}, 1)">+</button>
-                <input type="number" value="${cartAmount}" />
-                <button onclick="updateCart(${product.id}, -1)">-</button>
-              </div>
-            </div>
-          </div>`;
+                        <div class="card-controller">
+                        <button class="delete-btn" onclick="removeFromCart(${product.id})">✖</button>
+                        <div class="card-item-count">
+                            <button onclick="updateCart(${product.id}, 1)">+</button>
+                            <input type="number" value="${cartAmount}" />
+                            <button onclick="updateCart(${product.id}, -1)">-</button>
+                        </div>
+                        </div>
+                    </div>`;
             })
     )
 ).then(() => {

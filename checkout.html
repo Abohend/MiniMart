@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Checkout</title>
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./css/checkout.css" />
+        <link rel="stylesheet" href="./css/responsive.css" />
+        <script src="./js/checkout.js" defer></script>
+    </head>
+    <body>
+        <div class="back-arrow"><a href="cart.html">←</a></div>
+
+        <h1>CHECKOUT</h1>
+
+        <!-- <div class="tabs">
+            <div class="tab active">INFORMATION</div>
+            <div class="tab">SHIPPING</div>
+            <div class="tab">PAYMENT</div>
+        </div> -->
+
+        <div class="checkout-content">
+            <div class="left-section">
+                <div class="section-spacing">
+                    <h2>CONTACT INFO</h2>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" />
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone" />
+                    </div>
+                </div>
+
+                <div>
+                    <h2>SHIPPING ADDRESS</h2>
+                    <div class="form-row">
+                        <input type="text" placeholder="First Name" />
+                        <input type="text" placeholder="Last Name" />
+                    </div>
+                    <div class="form-group">
+                        <select>
+                            <option selected disabled>Country</option>
+                            <option>Egypt</option>
+                            <option>United States</option>
+                            <option>United Kingdom</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select>
+                            <option selected disabled>State / Region</option>
+                            <option>Tanta</option>
+                            <option>Cairo</option>
+                            <option>Alexandria</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Address" />
+                    </div>
+                    <div class="form-row">
+                        <input type="text" placeholder="City" />
+                        <input type="text" placeholder="Postal Code" />
+                    </div>
+
+                    <button class="shipping-btn">
+                        Shipping
+                        <span class="arrow-right">⟶</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <h2>
+                    YOUR ORDER
+                    <span>(2)</span>
+                </h2>
+                <div id="orders-container">
+                    <div class="order-item">
+                        <div class="item-image">
+                            <img
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='80' viewBox='0 0 60 80'%3E%3Crect fill='%23ddd' width='60' height='80'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23999' font-size='12'%3ET-Shirt%3C/text%3E%3C/svg%3E"
+                                alt="Basic Heavy T-Shirt"
+                            />
+                        </div>
+                        <div class="item-details">
+                            <div class="item-name">Basic Heavy T-Shirt</div>
+                            <!-- <div class="item-size">Black/L</div> -->
+                            <div class="item-quantity">(1)</div>
+                        </div>
+                        <div class="item-actions">
+                            <div class="item-price">$ 00</div>
+                            <!-- <div class="change-link">Change</div> -->
+                        </div>
+                    </div>
+    
+                    <div class="order-item">
+                        <div class="item-image">
+                            <img
+                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='80' viewBox='0 0 60 80'%3E%3Crect fill='%23ddd' width='60' height='80'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='%23999' font-size='12'%3ET-Shirt%3C/text%3E%3C/svg%3E"
+                                alt="Dazn Fit T-Shirt"
+                            />
+                        </div>
+                        <div class="item-details">
+                            <div class="item-name">Dazn Fit T-Shirt</div>
+                            <!-- <div class="item-size">Black/L</div> -->
+                            <div class="item-quantity">(1)</div>
+                        </div>
+                        <div class="item-actions">
+                            <div class="item-price">$ 00</div>
+                            <!-- <div class="change-link">Change</div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="subtotal">$100.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>$5.00</span>
+                    </div>
+                    <!-- <div class="calculation-note">Calculated at next step</div> -->
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="total">$100.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

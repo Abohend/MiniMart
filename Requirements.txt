@@ -33,8 +33,7 @@ Technical Requirements
 - Implement responsive design (mobile-first).
 - Use localStorage for state persistence (favorites, cart).
 - Use fetch API to get data from the dummy API.
-- Organize code using separation of concerns (HTML structure, CSS styling, JS logic).
-
+ 
 Bonus Challenges (Optional)
 - Add a loadi ng spinner while fetching data.
 - Implement pagination or lazy loading.

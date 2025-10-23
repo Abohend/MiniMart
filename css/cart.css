@@ -6,6 +6,7 @@
     align-items: center;
     gap: 30px;
     margin-top: var(--nav-height);
+    margin-bottom: 20px;
 }
 
 .cart-header button {

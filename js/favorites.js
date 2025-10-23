@@ -31,6 +31,10 @@ products.forEach((id) => {
         });
 });
 
+if (products.length === 0) {
+    cardItems.innerHTML = `<h1 style="width: 50vw; text-align: center; margin: 80px;">No favorites found</h1>`;
+}
+
 // remove favorite
 function removeFavorite(productId) {
     // remove card

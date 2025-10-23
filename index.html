@@ -8,36 +8,48 @@
             content="a clothes ecommerce website build with html, css and js"
         />
         <title>MallMart</title>
-        <link rel="shortcut icon" href="./assets/icons/favicon.png" type="image/x-icon">
+        <link
+            rel="shortcut icon"
+            href="./assets/icons/favicon.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        />
         <link
             href="https://fonts.cdnfonts.com/css/beatrice-display-trial"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="./css/main.css" />
         <link rel="stylesheet" href="./css/components.css" />
+        <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./css/index.css" />
         <link rel="stylesheet" href="./css/responsive.css" />
+        <script src="./js/utils.js"></script>
         <script src="./js/main.js"></script>
+        <script src="./js/index.js" defer></script>
     </head>
     <body>
         <header id="header"></header>
         <main class="index-main">
             <section>
                 <ul class="categories">
-                    <li>MEN</li>
-                    <li>WOMEN</li>
-                    <li>KIDS</li>
+                    <li><a href="#new-collection">New Collection</a></li>
+                    <li><a href="#watch-collection">Watch Collection</a></li>
+                    <li><a href="#xiv-collection">XIV Collection 25/26</a></li>
                 </ul>
-                <div class="search-box">
-                    <img src="./assets/icons/search.png" alt="search icon" />
-                    <input type="text" placeholder="Search" />
-                </div>
+                <form class="search-box" onsubmit="search(); return false;">
+                    <i class="fas fa-search"></i>
+                    <input id="search-box" type="text" />
+                    <button type="submit">Search</button>
+                </form>
             </section>
 
             <section class="hero">
                 <!-- Left text -->
                 <div class="hero-text">
                     <div>
-                        <h2>NEW<br />COLLECTION</h2>
+                        <h2 id="new-collection">NEW<br />COLLECTION</h2>
                         <p>
                             Summer <br />
                             2024
@@ -45,35 +57,27 @@
                     </div>
 
                     <div class="hero-controls">
-                        <button class="shop-btn">
+                        <a href="./products.html" class="shop-btn">
                             Go To Shop<span>→</span>
-                        </button>
-                        <button class="arrow-btn">‹</button>
-                        <button class="arrow-btn">›</button>
+                        </a>
+                        <button class="arrow-btn left-arr">‹</button>
+                        <button class="arrow-btn right-arr">›</button>
                     </div>
                 </div>
-                <div class="hero-grid">
-                    <!-- Middle image -->
-                    <div class="hero-image">
-                        <img src="./assets/images/image.png" alt="product 1" />
-                    </div>
-
-                    <!-- Right image -->
-                    <div class="hero-image">
-                        <img src="./assets/images/image.png" alt="product 2" />
-                    </div>
-                </div>
+                <div class="row-grid" id="new-collection-grid"></div>
             </section>
 
             <section class="products-section">
                 <!-- Header -->
                 <div class="products-header">
-                    <h2>NEW<br />THIS WEEK<sup>(50)</sup></h2>
-                    <a href="#">See All</a>
+                    <h2 id="watch-collection">
+                        Watches<br />Collection<sup>(9)</sup>
+                    </h2>
+                    <a href="./products.html?query=watch">See All</a>
                 </div>
 
                 <!-- Product Grid -->
-                <div class="products-grid">
+                <div class="row-grid" id="watch-collection-grid">
                     <!-- Card 1 -->
                     <div class="product-card">
                         <div class="product-img">
@@ -137,8 +141,8 @@
 
                 <!-- Arrows -->
                 <div class="arrows">
-                    <button class="arrow-btn">‹</button>
-                    <button class="arrow-btn">›</button>
+                    <button class="arrow-btn left-arr">‹</button>
+                    <button class="arrow-btn right-arr">›</button>
                 </div>
             </section>
 
@@ -146,7 +150,7 @@
             <section class="collections-section">
                 <!-- Header -->
                 <div class="products-header">
-                    <h2>XIV<br />COLLECTIONS<br />23-24</h2>
+                    <h2 id="xiv-collection">XIV<br />COLLECTIONS<br />23-24</h2>
                     <div class="filter">
                         <ul>
                             <li>(All)</li>

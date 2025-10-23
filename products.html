@@ -4,7 +4,15 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Products</title>
-        <link rel="shortcut icon" href="./assets/icons/favicon.png" type="image/x-icon">
+        <link
+            rel="shortcut icon"
+            href="./assets/icons/favicon.png"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        />
         <link rel="stylesheet" href="./css/main.css" />
         <link rel="stylesheet" href="./css/products.css" />
         <link rel="stylesheet" href="./css/components.css" />
@@ -28,18 +36,14 @@
                     </div>
 
                     <div class="filter">
-                        <div class="search-box">
-                            <img
-                                src="./assets/icons/search.png"
-                                alt="search icon"
-                                onclick="search()"
-                            />
-                            <input
-                                id="search-box"
-                                type="text"
-                                placeholder="Search"
-                            />
-                        </div>
+                        <form
+                            class="search-box"
+                            onsubmit="search(); return false;"
+                        >
+                            <i class="fas fa-search"></i>
+                            <input id="search-box" type="text" />
+                            <button type="submit">Search</button>
+                        </form>
 
                         <div id="categories" class="pg-categories">
                             <button
@@ -53,8 +57,7 @@
                 </header>
                 <main>
                     <!-- Product Grid -->
-                    <div id="products-grid" class="products-grid">
-                    </div>
+                    <div id="products-grid" class="products-grid"></div>
                 </main>
             </main>
         </main>
